@@ -1,0 +1,402 @@
+/* Header */
+
+header {
+  z-index: 1;
+  background: white;
+  width: 100%;
+}
+
+header .header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+}
+
+header .arrow {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 30px;
+  top: 30%;
+  font-size: 25px;
+}
+
+header .arrow a {
+  color: #000;
+}
+
+header .header__logo {
+  font-family: 'Shrikhand';
+  margin: 0;
+}
+
+header .header__logo a {
+  color: #000;
+}
+
+/* Body */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: #FFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+* a {
+  text-decoration: none;
+  color: #FFFF;
+}
+
+/* Image */
+
+.img {
+  width: 100%;
+  height: 50vh;
+}
+
+.PhotoResto {
+  object-fit: cover;
+  margin-top: -80px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Carte Menus */
+
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  width: 100%;
+}
+
+.menu {
+  margin-top: -200px;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 30px 30px 0 0;
+  background-color: #FFFF;
+}
+
+.menu__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__header__title {
+  font-family: 'Shrikhand';
+}
+
+.menu__header__heart .heart {
+  width: 30px;
+  stroke-width: 30;
+  stroke: black;
+  fill: white;
+  cursor: pointer;
+}
+
+.menu__header__heart .heart-full {
+  position: absolute;
+  fill: url(#text-fill);
+  stroke: none;
+}
+
+.menu__header__heart .heart-empty {
+  position: relative;
+}
+
+.menu__header__heart .heart-empty:hover {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.CarteMenu {
+  display: grid;
+  grid-gap: 40px;
+}
+
+.CarteMenuC {
+  display: grid;
+  grid-gap: 15px;
+}
+
+.CMT h3 {
+  position: relative;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.CMT h3::after {
+  content: '';
+  width: 50px;
+  height: 4px;
+  background: #99e2d0;
+  position: absolute;
+  z-index: 20;
+  left: 0px;
+  bottom: -8px;
+}
+
+.menu__grid__case {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu__grid__case:hover .CheckCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide-left 0.5s ease;
+  transform-origin: right;
+}
+
+.menu__grid__case:hover .PrixCard {
+  padding-right: 70px;
+  transition: 0.5s ease;
+}
+
+.menu__grid__case .CheckCard {
+  display: none;
+  position: absolute;
+  background: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  right: 0px;
+  padding: 0 13px;
+  height: 100%;
+}
+
+.menu__grid__case .CheckCard i {
+  font-size: 30px;
+  color: white;
+  transform: rotate(180deg);
+  animation: rotate 0.5s both;
+}
+
+.MCP {
+  margin-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.MCP p {
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.MCPT {
+  font-weight: bold;
+}
+
+.PrixCard {
+  padding-right: 20px;
+  font-weight: bold;
+  padding-left: 7px;
+}
+
+.Plat_Prix {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Boutton */
+
+.BtnCommander {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.BtnCom {
+  opacity: 1;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  color: white;
+  padding: 0 20px;
+  border-radius: 200px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  margin: 50px 0;
+  font-size: 18px;
+}
+
+.BtnCom:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Anim Check */
+
+
+@keyframes rotate {
+  0% {
+            transform: rotate(0);
+  }
+  100% {
+            transform: rotate(360deg);
+  }
+}
+
+
+@keyframes slide-left {
+  0% {
+            transform: scaleX(0);
+  }
+  100% {
+            transform: scaleX(-50px);
+  }
+}
+
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Anim Cascade */
+
+.appears-with-opacity {
+  animation: opacity 1s both;
+}
+
+#B1 {
+  animation-delay: 0.3s;
+}
+
+#B2 {
+  animation-delay: 0.5s;
+}
+
+#B3 {
+  animation-delay: 0.7s;
+}
+
+#B15 {
+  animation-delay: 0.8s;
+}
+
+#B4 {
+  animation-delay: 0.9s;
+}
+
+#B5 {
+  animation-delay: 1.1s;
+}
+
+#B6 {
+  animation-delay: 1.3s;
+}
+
+#B7 {
+  animation-delay: 1.5s;
+}
+
+#B8 {
+  animation-delay: 1.7s;
+}
+
+#B9 {
+  animation-delay: 1.9s;
+}
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  background-color: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SectionFooter {
+  padding: 0 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.SectionFooter .logo {
+  font-family: 'Shrikhand';
+  color: white;
+  font-size: 20px;
+  padding: 15px 0;
+}
+
+.LiensFooter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.LinkFooter {
+  display: flex;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  color: white;
+  height: 30px;
+  cursor: pointer;
+}
+
+.LinkFooter i {
+  margin-right: 7px;
+}
+
+.NamesFooter {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 1000px) {
+  .menu {
+    margin-top: -60px;
+  }
+  .CarteMenu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .PhotoResto {
+    margin-top: 0;
+  }
+  .SectionFooter {
+    margin-bottom: 15px;
+  }
+  .LiensFooter {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 900px;
+  }
+}
